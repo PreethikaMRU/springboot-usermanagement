@@ -1,0 +1,35 @@
+<div class="home">
+    <p>User details</p>
+    <div class="tables">
+        <table>
+            <thead>
+              <tr>
+                <th>S.no</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody >
+              @for (user of users; track $index){
+              <tr>
+                <td>{{$index+1}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <th><button routerLink="/viewuser/{{user.id}}" class="viewbutton">View</button></th>
+                <th><button routerLink="/edituser/{{user.id}}" class="editbutton">Edit</button></th>
+                <th><button (click)="deleteUser(user.id)" class="deletebutton">Delete</button></th>
+              </tr>
+            }
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,21 @@
+
+<p>Edit user</p>
+
+<form (submit)="createPut()">
+
+<label for="username">
+    Username:
+    <input id="username" type="text" [(ngModel)]="myData.username" [ngModelOptions]="{standalone: true}" >
+</label>
+<label for="name">
+    Name:
+    <input id="name" type="text" [(ngModel)]="myData.name" [ngModelOptions]="{standalone: true}">
+</label>
+<label for="email">
+    Email:
+    <input id="email" type="email" [(ngModel)]="myData.email" [ngModelOptions]="{standalone: true}" >
+</label>
+    
+    
+<button type="submit">Save</button>
+</form>

@@ -1,0 +1,21 @@
+
+<p>Add new user</p>
+
+<form (submit)="createPost()">
+
+
+<label for="username">
+    Username:
+    <input id="username" type="text" [(ngModel)]="myData.username" [ngModelOptions]="{standalone: true}" [value]="myData.username">
+</label>
+<label for="name">
+    Name:
+    <input id="name" type="text" [(ngModel)]="myData.name" [ngModelOptions]="{standalone: true}" [value]="myData.name">
+</label>
+<label for="email">
+    Email:
+    <input id="email" type="email" [(ngModel)]="myData.email" [ngModelOptions]="{standalone: true}" [value]="myData.email">
+</label>
+
+<button type="submit">Submit</button>
+</form>
